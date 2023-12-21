@@ -51,8 +51,15 @@ function togglePassword() {
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
     let url = input.value.trim();
-    openURL(url);
-  });
+
+    if (isUrl(url)) {
+        openURL(url);
+    } else {
+        // If it's not a URL, perform Ultraviolet search
+        const uvSearchURL = getSearchEngineURL() + url;
+        openURL(uvSearchURL);
+    }
+});
   
 function isUrl(val = "") {
     if (
