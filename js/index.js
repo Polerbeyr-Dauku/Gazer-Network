@@ -60,6 +60,22 @@ form.addEventListener("submit", async (event) => {
         openURL(uvSearchURL);
     }
 });
+
+// Add an event listener for the Enter key press
+input.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        let url = input.value.trim();
+
+        if (isUrl(url)) {
+            openURL(url);
+        } else {
+            // If it's not a URL, perform Ultraviolet search
+            const uvSearchURL = getSearchEngineURL() + url;
+            openURL(uvSearchURL);
+        }
+});
+
   
 function isUrl(val = "") {
     if (
