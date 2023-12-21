@@ -69,6 +69,17 @@ function openURL(url) {
     window.navigator.serviceWorker
     .register("./uv.js", {
       scope: __uv$config.prefix,
+        form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    let url = input.value.trim();
+    console.log("URL:", url);
+    openURL(url);
+});
+
+function openURL(url) {
+    console.log("Opening URL:", url);
+}
+
     })
     .then(() => {
       if (!isUrl(url)) url = getSearchEngineURL() + url;
