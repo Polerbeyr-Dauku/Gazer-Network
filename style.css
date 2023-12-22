@@ -13,39 +13,6 @@ body{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <style>
-        
-        /* Navbar styles */
-        nav {
-            background-color: black;
-            overflow: hidden;
-        }
-
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        nav a:hover {
-            background-color: grey;
-            color: black;
-        }
-
-    </style>
-    <title>Gazer Games</title>
-</head>
-<body>
-
-<nav>
-  <a href="#gazergames">Gazer Games</a>
-  <a href="#search">Search</a>
-  <a href="#settings">Settings</a>
-  <a href="#contact">Contact</a>
-</nav>
 
 </body>
 </html>
