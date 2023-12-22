@@ -48,9 +48,12 @@ function togglePassword() {
 
 // end of password protection
 
-});
+form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    let url = input.value.trim();
+    openURL(url);
+  });
 
-  
 function isUrl(val = "") {
     if (
         /^http(s?):\/\//.test(val) ||
@@ -59,7 +62,7 @@ function isUrl(val = "") {
         return true;
     return false;
 }
-  
+
 
 // open url function
 function openURL(url) {
@@ -333,7 +336,7 @@ function changeFavicon(src) {
     }
     document.head.appendChild(link);
    }
-   
+
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register(window.location.origin + "/js/sw.js");
   }
